@@ -1,32 +1,68 @@
 ---
-title: "Tarea01- Cátedra de Genómica y Bioinformática"
-author: "Shirley Michell Salcan Castillo"
-date: "24/2/2022"
-output: html_document
+title: '2021II GBI6 BIOINFORMÁTICA'
+subtitle: 'Deber 01.- Variables, Vectores, Matrices y Dataframes'
+author: "Shirley Salcán"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    fig_height: 6
+    fig_width: 8
+    theme: journal
+    highlight: zenburn
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r warning=FALSE, message=FALSE,echo=FALSE}
+rm(list=ls())         # borrar todo lo que haya en memoria
+options(encoding = "utf-8")
 ```
 
-### Variables
+## Variables
+```{r}
 c <- 33
+c
 a <- 11
+a
 b <- c/a
+b
+```
 
-### Vectores
+## Vectores
+```{r}
 d <- c("Shirley","Michell","Salcán","Castillo")
+d
 e <- c(1,2,3,4,5,6,7,8,9)
-f <- c(4.17,8.46,9.27,1.75,3.85,7.89)
+e
+f <- c(4.17,8.46,9.27,1.75,3.85,7.89,4.72,2.74,1.37)
+f
+```
 
-### DataFrames
+## Matriz con vectores como fila 
+```{r}
+nums <- rbind(e,f)
+nums
+
+```
+
+## DataFrames
+```{r}
 e <- data.frame('Num'=seq(1:6),
                 'Names'=c('Eduardo','Mariela','Michell','Jhonn','Nayla','Jeampierr'),
                 'Parentesco'=c('Padre','Madre','Hija','Hijo','Hija','Hijo'),
                 'Edad'=c(49,40,20,19,16,12))
+e
 
-```{r cars}
-summary(cars)
+```
+
+##Datos precargados en R
+Se tomó la data Indometh, que corresponde a la farmacocinética de Indometacina. Esta data tiene 66 observaciones y 3 variables, ls variables corresponden a 1)Número de sujeto, 2)Tiempo desde la administración del fármaco y 3)Concenración de Indometacina.
+```{r}
+contenido <- data("Indometh")
+head (contenido,3)
 ```
 
 ## Including Plots
