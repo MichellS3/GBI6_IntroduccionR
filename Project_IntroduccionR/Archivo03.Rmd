@@ -41,7 +41,9 @@ f <- c(4.17,8.46,9.27,1.75,3.85,7.89,4.72,2.74,1.37)
 f
 ```
 
-## Matriz con vectores como fila 
+## Matrices
+
+Realizar una matriz a partir de listas como filas
 ```{r}
 nums <- rbind(e,f)
 nums
@@ -58,13 +60,16 @@ e
 
 ```
 
-##Datos precargados en R
+## Datos precargados en R
+
 Se tomó la data Indometh, que corresponde a la farmacocinética de Indometacina. Esta data tiene 66 observaciones de 6 sujetos diferentes y 3 variables, las variables corresponden a 1)Número de sujeto, 2)Tiempo desde la administración del fármaco y 3)Concenración de Indometacina.
 ```{r}
 contenido <- data("Indometh")
 contenido
+Indometh
 str(Indometh)
-subj1 <- Indometh[Indometh$Subject == "2",]
+#Tomar solo los datos del sujeto 2
+subj1 <- Indometh[Indometh$Subject == "2",] 
 subj1
 ```
 
