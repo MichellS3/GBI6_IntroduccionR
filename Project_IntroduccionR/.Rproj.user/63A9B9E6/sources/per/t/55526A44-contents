@@ -1,0 +1,40 @@
+---
+title: "Tarea01- Cátedra de Genómica y Bioinformática"
+author: "Shirley Michell Salcan Castillo"
+date: "24/2/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Variables
+c <- 33
+a <- 11
+b <- c/a
+
+### Vectores
+d <- c("Shirley","Michell","Salcán","Castillo")
+e <- c(1,2,3,4,5,6,7,8,9)
+f <- c(4.17,8.46,9.27,1.75,3.85,7.89)
+
+### DataFrames
+e <- data.frame('Num'=seq(1:6),
+                'Names'=c('Eduardo','Mariela','Michell','Jhonn','Nayla','Jeampierr'),
+                'Parentesco'=c('Padre','Madre','Hija','Hijo','Hija','Hijo'),
+                'Edad'=c(49,40,20,19,16,12))
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
