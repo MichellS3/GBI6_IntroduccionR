@@ -59,18 +59,12 @@ e
 ```
 
 ##Datos precargados en R
-Se tomó la data Indometh, que corresponde a la farmacocinética de Indometacina. Esta data tiene 66 observaciones y 3 variables, ls variables corresponden a 1)Número de sujeto, 2)Tiempo desde la administración del fármaco y 3)Concenración de Indometacina.
+Se tomó la data Indometh, que corresponde a la farmacocinética de Indometacina. Esta data tiene 66 observaciones de 6 sujetos diferentes y 3 variables, las variables corresponden a 1)Número de sujeto, 2)Tiempo desde la administración del fármaco y 3)Concenración de Indometacina.
 ```{r}
 contenido <- data("Indometh")
-head (contenido,3)
+contenido
+str(Indometh)
+subj1 <- Indometh[Indometh$Subject == "2",]
+subj1
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
